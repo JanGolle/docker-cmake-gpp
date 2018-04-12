@@ -1,7 +1,5 @@
 FROM ubuntu:trusty
 
-COPY . /usr/bin/tracker
-
 RUN apt-get update && apt-get install -y \
     wget \
     build-essential \
