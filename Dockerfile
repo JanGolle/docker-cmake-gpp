@@ -1,7 +1,16 @@
 FROM alpine:latest
 
-RUN apk update
-RUN apk add g++ gcc clang make cmake git bash
+LABEL maintainer="elijah.zakirov@gmail.com"
+
+RUN apk update && apk upgrade
+RUN apk add --no-cache \
+	g++ \
+	gcc \
+	clang \
+	make \
+	cmake \
+	git \
+	bash
 
 CMD ["/bin/bash"]
 
